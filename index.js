@@ -58,6 +58,13 @@ async function run() {
         const result = await reviewCollection.findOne(query);
         res.json(result);
     })
+
+    app.delete('/reviews/:id', async(req, res)=>{
+        const id = req.params.id;
+        const query = {_id : new ObjectId(id)}
+        const result = await reviewCollection.deleteOne(query);
+        res.send(result);
+    })
     
 
     await client.db("admin").command({ ping: 1 });
