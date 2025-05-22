@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "664ddf9c2e6d9a5e7f1c0011" ,
+    "coverImage": "https://i.ibb.co/CBZJ3VV/elden-ring.jpg",
+    "title": "Elden Ring",
+    "description": "An outstanding action RPG with a vast open world and deep lore. FromSoftware delivers another masterpiece.",
+    "rating": 9.5,
+    "year": 2022,
+    "genre": "RPG",
+    "userEmail": "gamer1@example.com"
+  },
+  {
+    "_id":"664ddf9c2e6d9a5e7f1c0012" ,
+    "coverImage": "https://i.ibb.co/02dMqCS/hogwarts-legacy.jpg",
+    "title": "Hogwarts Legacy",
+    "description": "A dream come true for Harry Potter fans. Magical combat and exploration make it immersive, despite some bugs.",
+    "rating": 8.2,
+    "year": 2023,
+    "genre": "Adventure",
+    "userEmail": "witcherfan99@example.com"
+  },
+  {
+    "_id":"664ddf9c2e6d9a5e7f1c0013" ,
+    "coverImage": "https://i.ibb.co/z7xzkGP/god-of-war-ragnarok.jpg",
+    "title": "God of War: Ragnarok",
+    "description": "Kratos returns in an epic Norse saga with emotional storytelling and satisfying combat.",
+    "rating": 9.7,
+    "year": 2022,
+    "genre": "Action",
+    "userEmail": "valhalla_gamer@example.com"
+  },
+  {
+    "_id":"664ddf9c2e6d9a5e7f1c0014" ,
+    "coverImage": "https://i.ibb.co/SKpyzFn/cyberpunk2077.jpg",
+    "title": "Cyberpunk 2077",
+    "description": "After many patches, Night City feels alive. A solid story with lots of player freedom.",
+    "rating": 8.8,
+    "year": 2020,
+    "genre": "RPG",
+    "userEmail": "techno_mancer@example.com"
+  },
+  {
+    "_id": "664ddf9c2e6d9a5e7f1c0015" ,
+    "coverImage": "https://i.ibb.co/W3FQDXT/zelda-totk.jpg",
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "description": "Another groundbreaking open-world game by Nintendo. Puzzles, exploration, and innovation shine throughout.",
+    "rating": 10,
+    "year": 2023,
+    "genre": "Adventure",
+    "userEmail": "zelda_lover@example.com"
+  },
+  {
+    "_id": "664ddf9c2e6d9a5e7f1c0016" ,
+    "coverImage": "https://i.ibb.co/2ckBHpR/alan-wake-2.jpg",
+    "title": "Alan Wake 2",
+    "description": "A creepy, atmospheric sequel blending psychological horror with engaging narrative design.",
+    "rating": 9.0,
+    "year": 2023,
+    "genre": "Adventure",
+    "userEmail": "writer_dark@example.com"
+  },
+  {
+    "_id": "664ddf9c2e6d9a5e7f1c0017" ,
+    "coverImage": "https://i.ibb.co/pf7MyJn/tekken8.jpg",
+    "title": "Tekken 8",
+    "description": "The latest entry in the iconic fighting game series. Fast-paced, balanced, and visually stunning.",
+    "rating": 8.9,
+    "year": 2024,
+    "genre": "Action",
+    "userEmail": "fightingpro@example.com"
+  }
+]
+
