@@ -38,8 +38,20 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     await client.connect();
+    const reviewCollection = client.db('reviewsDB').collection('reviews');
+
+
+    const count = await reviewCollection.countDocuments();
+    if(count === 0){
+        const insertManyResult = await reviewCollection.insertMany(reviews);
+    }
     
-    const reviewCollection = client.db('reviewsDB').collection('reviews')
+    
+    app.get('/reviews', async(req, res)=>{
+        const allReviews = await reviewCollection.find().toArray();
+        res.json(allReviews);
+    })
+    
 
     
 
