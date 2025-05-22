@@ -1,142 +1,132 @@
 [
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0011",
     "coverImage": "https://i.ibb.co/xKJDNRj5/elden-ring.jpg",
     "title": "Elden Ring",
-    "description": "Elden Ring is an outstanding action RPG...",
+    "description": "Elden Ring is an outstanding action RPG set in a vast open world filled with secrets, challenging combat, and a deep lore crafted by FromSoftware and George R.R. Martin. The game masterfully blends exploration, intense battles, and storytelling, offering players immense freedom and a rewarding experience. Its atmospheric environments and intricate design make it a masterpiece in the genre.",
     "rating": 9.5,
     "year": 2022,
     "genre": "RPG",
     "developer": "FromSoftware",
     "platform": "PC, PS4, PS5, Xbox One, Xbox Series X/S",
     "userEmail": "gamer1@example.com",
-    "userName": "Gamer One",
-    "trending": true
+    "trending": true,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0012",
     "coverImage": "https://i.ibb.co/dwWByDmD/Hogwarts-Legacy.jpg",
     "title": "Hogwarts Legacy",
-    "description": "Hogwarts Legacy brings the magical world...",
+    "description": "Hogwarts Legacy brings the magical world of Harry Potter to life like never before, allowing players to attend Hogwarts School of Witchcraft and Wizardry and explore an immersive open world. With spellcasting, potion-making, and magical combat at its core, the game delivers an engaging experience for fans.",
     "rating": 8.2,
     "year": 2023,
     "genre": "Adventure",
     "developer": "Portkey Games",
     "platform": "PC, PS4, PS5, Xbox One, Xbox Series X/S, Nintendo Switch",
     "userEmail": "witcherfan99@example.com",
-    "userName": "Witcher Fan",
-    "trending": true
+    "trending": true,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0013",
     "coverImage": "https://i.ibb.co/PZyZFJC1/God-of-War-Ragnarok.jpg",
     "title": "God of War: Ragnarok",
-    "description": "God of War: Ragnarok delivers an emotionally charged...",
+    "description": "God of War: Ragnarok delivers an emotionally charged Norse saga featuring Kratos and Atreus on a journey filled with mythological beasts and epic battles. The game shines with its gripping narrative, refined combat mechanics, and breathtaking visuals.",
     "rating": 9.7,
     "year": 2022,
     "genre": "Action",
     "developer": "Santa Monica Studio",
     "platform": "PS4, PS5",
     "userEmail": "valhalla_gamer@example.com",
-    "userName": "Valhalla Gamer",
-    "trending": true
+    "trending": true,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0014",
     "coverImage": "https://i.ibb.co/V0cQN5hF/Cyberpunk-2077.jpg",
     "title": "Cyberpunk 2077",
-    "description": "Cyberpunk 2077, after numerous patches and updates...",
+    "description": "Cyberpunk 2077, after numerous patches and updates, finally feels like the ambitious RPG it aimed to be. Set in the vibrant, neon-lit Night City, the game offers players extensive freedom to explore, customize characters, and engage in a branching narrative.",
     "rating": 8.8,
     "year": 2020,
     "genre": "RPG",
     "developer": "CD Projekt Red",
     "platform": "PC, PS4, PS5, Xbox One, Xbox Series X/S",
     "userEmail": "techno_mancer@example.com",
-    "userName": "Techno Mancer",
-    "trending": false
+    "trending": false,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0015",
     "coverImage": "https://i.ibb.co/cX70qbxk/The-Legend-of-Zelda-Tears-of-the-Kingdom.jpg",
     "title": "The Legend of Zelda: Tears of the Kingdom",
-    "description": "The Legend of Zelda: Tears of the Kingdom continues Nintendo's tradition...",
+    "description": "The Legend of Zelda: Tears of the Kingdom continues Nintendo's tradition of innovative open-world gameplay with stunning puzzles, exploration, and captivating storytelling.",
     "rating": 10,
     "year": 2023,
     "genre": "Adventure",
     "developer": "Nintendo",
     "platform": "Nintendo Switch",
     "userEmail": "zelda_lover@example.com",
-    "userName": "Zelda Lover",
-    "trending": true
+    "trending": true,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0016",
     "coverImage": "https://i.ibb.co/bMjLtMBh/Alan-Wake-2.jpg",
     "title": "Alan Wake 2",
-    "description": "Alan Wake 2 offers a dark, atmospheric sequel...",
+    "description": "Alan Wake 2 offers a dark, atmospheric sequel that blends psychological horror with an engrossing narrative and intense gameplay.",
     "rating": 9.0,
     "year": 2023,
     "genre": "Adventure",
     "developer": "Remedy Entertainment",
     "platform": "PC, PS5, Xbox Series X/S",
     "userEmail": "writer_dark@example.com",
-    "userName": "Writer Dark",
-    "trending": false
+    "trending": false,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0017",
     "coverImage": "https://i.ibb.co/11sfKTb/Tekken-8.jpg",
     "title": "Tekken 8",
-    "description": "Tekken 8 continues the legacy of the iconic fighting game...",
+    "description": "Tekken 8 continues the legacy of the iconic fighting game series with fast-paced, balanced gameplay and stunning visuals that bring each character to life.",
     "rating": 8.9,
     "year": 2024,
     "genre": "Action",
     "developer": "Bandai Namco Studios",
     "platform": "PC, PS5, Xbox Series X/S",
     "userEmail": "fightingpro@example.com",
-    "userName": "Fighting Pro",
-    "trending": true
+    "trending": true,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0020",
     "coverImage": "https://i.ibb.co/zVdFJHTG/Buggy-Racer.jpg",
     "title": "Buggy Racer",
-    "description": "Buggy Racer attempts to deliver a thrilling off-road racing...",
+    "description": "Buggy Racer attempts to deliver a thrilling off-road racing experience but falls short due to numerous glitches and unpolished controls.",
     "rating": 4.5,
     "year": 2023,
     "genre": "Racing",
     "developer": "IndieSpeed Studio",
     "platform": "PC, Android",
     "userEmail": "speedster@example.com",
-    "userName": "Speedster",
-    "trending": false
+    "trending": false,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0021",
     "coverImage": "https://i.ibb.co/0jn76fMP/Space-Explorer.jpg",
     "title": "Space Explorer",
-    "description": "Space Explorer sets out to offer an expansive space adventure...",
+    "description": "Space Explorer sets out to offer an expansive space adventure filled with exploration and combat, but it suffers from repetitive missions and weak content.",
     "rating": 5.0,
     "year": 2022,
     "genre": "Adventure",
     "developer": "Galactic Games",
     "platform": "PC, Xbox One",
     "userEmail": "spacefan@example.com",
-    "userName": "Space Fan",
-    "trending": false
+    "trending": false,
+    "date": "2025-05-22T00:00:00.000Z"
   },
   {
-    "_id": "664ddf9c2e6d9a5e7f1c0022",
     "coverImage": "https://i.ibb.co/KpxvKvLX/Fantasy-Battle.jpg",
     "title": "Fantasy Battle",
-    "description": "Fantasy Battle is a combat-focused fantasy game...",
+    "description": "Fantasy Battle is a combat-focused fantasy game that unfortunately suffers from poor AI behavior and repetitive storylines.",
     "rating": 4.8,
     "year": 2021,
     "genre": "Action",
     "developer": "DreamForge Interactive",
     "platform": "PC",
     "userEmail": "casualgamer@example.com",
-    "userName": "Casual Gamer",
-    "trending": false
+    "trending": false,
+    "date": "2025-05-22T00:00:00.000Z"
   }
 ]

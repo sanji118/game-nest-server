@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 require('dotenv').config();
-const {MongoClient, ServerApiVersion} = require('mongodb')
+const {MongoClient, ServerApiVersion, ObjectId} = require('mongodb')
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -19,9 +19,6 @@ app.get('/', (req, res)=>{
     res.send('GameNest server is running !');
 })
 
-app.get('/reviews', async(req, res)=>{
-        res.json(reviews);
-})
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.95qfhdq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
@@ -39,20 +36,28 @@ async function run() {
   try {
     await client.connect();
     const reviewCollection = client.db('reviewsDB').collection('reviews');
+    await reviewCollection.deleteMany({});
+    await reviewCollection.insertMany(reviews);
 
-
-    const count = await reviewCollection.countDocuments();
-    if(count === 0){
-        const insertManyResult = await reviewCollection.insertMany(reviews);
-    }
     
     
     app.get('/reviews', async(req, res)=>{
         const allReviews = await reviewCollection.find().toArray();
-        res.json(allReviews);
+        res.send(allReviews);
+    })
+
+    app.post('/reviews', async(req, res) =>{
+        const newReview = req.body;
+        const result = await reviewCollection.insertOne(newReview);
+        res.send(result);
     })
     
-
+    app.get('/reviews/:id', async(req, res)=>{
+        const id = req.params.id;
+        const query = {_id : new ObjectId(id)}
+        const result = await reviewCollection.findOne(query);
+        res.json(result);
+    })
     
 
     await client.db("admin").command({ ping: 1 });
