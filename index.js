@@ -35,17 +35,22 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // await client.connect();
+    client.connect();
     const reviewCollection = client.db('reviewsDB').collection('reviews');
     const watchlistCollection = client.db('reviewsDB').collection('watchlists');
-    await reviewCollection.deleteMany({});
-    await reviewCollection.insertMany(reviews);
+    //await reviewCollection.deleteMany({});
+    //await reviewCollection.insertMany(reviews);
 
     
     
     app.get('/reviews', async(req, res)=>{
-        const allReviews = await reviewCollection.find().toArray();
-        res.send(allReviews);
+        try {
+            const allReviews = await reviewCollection.find().toArray();
+            res.send(allReviews);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Server error');
+        }
     })
 
     app.post('/reviews', async(req, res) =>{
@@ -106,19 +111,19 @@ async function run() {
         res.send(result);
     })
 
-    app.post('/api/watchlist', async(req, res) =>{
+    app.post('/watchlist', async(req, res) =>{
         const newWatchlist = req.body;
         const result = await watchlistCollection.insertOne(newWatchlist);
         res.send(result);
     })
 
-    app.get('/api/watchlist', async (req, res) => {
+    app.get('/watchlist', async (req, res) => {
         const email = req.query.email;
         const result = await watchlistCollection.find({ userEmail: email }).toArray();
         res.send(result);
     });
 
-    app.get('/api/watchlist/:id', async (req, res) => {
+    app.get('/watchlist/:id', async (req, res) => {
         const id = req.params.id;
 
         if (!ObjectId.isValid(id)) {
@@ -135,7 +140,7 @@ async function run() {
         res.json(result);
     });
 
-    app.delete('/api/watchlist/:id', async(req, res)=>{
+    app.delete('/watchlist/:id', async(req, res)=>{
         const id = req.params.id;
         const query = {_id : new ObjectId(id)}
         const result = await watchlistCollection.deleteOne(query);
