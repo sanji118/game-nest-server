@@ -36,6 +36,7 @@ async function run() {
   try {
     await client.connect();
     const reviewCollection = client.db('reviewsDB').collection('reviews');
+    const watchlistCollection = client.db('reviewDB').collection('watchlists');
     await reviewCollection.deleteMany({});
     await reviewCollection.insertMany(reviews);
 
@@ -59,13 +60,54 @@ async function run() {
         res.json(result);
     })
 
+    app.put('/reviews/:id', async(req, res)=>{
+        const id = req.params.id;
+        const filter = {_id : new ObjectId(id)}
+        const options = {upsert : true};
+        const updatedReview = req.body;
+        const updateReviews= {
+            $set: {
+                title: updatedReview.title,
+                coverImage: updatedReview.coverImage,
+                rating: updatedReview.rating,
+                year: updatedReview.year,
+                genre: updatedReview.genre,
+                userEmail: updatedReview.userEmail,
+                userName: updatedReview.userName,
+                description: updatedReview.description,
+                trending: updatedReview.trending,
+                date: updatedReview.date
+            } 
+        }
+        const result = await reviewCollection.updateOne(filter, updateReviews, options);
+        res.send(result);
+    })
+
     app.delete('/reviews/:id', async(req, res)=>{
         const id = req.params.id;
         const query = {_id : new ObjectId(id)}
         const result = await reviewCollection.deleteOne(query);
         res.send(result);
     })
-    
+
+    app.post('/api/watchlist', async(req, res) =>{
+        const newWatchlist = req.body;
+        const result = await watchlistCollection.insertOne(newWatchlist);
+        res.send(result);
+    })
+
+    app.get('/api/watchlist', async(req, res)=>{
+        const allItems = await watchlistCollection.find().toArray();
+        res.send(allItems);
+    })
+
+    app.get('/api/watchlist/:id', async(req, res)=>{
+        const id = req.params.id;
+        const query = {_id : new ObjectId(id)}
+        const result = await watchlistCollection.findOne(query);
+        res.json(result);
+    })
+
 
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
