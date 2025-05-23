@@ -111,11 +111,24 @@ async function run() {
         res.send(result);
     })
 
-    app.post('/watchlist', async(req, res) =>{
+    app.post('/watchlist', async (req, res) => {
         const newWatchlist = req.body;
+
+        const query = {
+            userEmail: newWatchlist.userEmail,
+            reviewId: newWatchlist.reviewId
+        };
+
+        const existing = await watchlistCollection.findOne(query);
+
+        if (existing) {
+            return res.status(409).send({ message: 'Already in watchlist' });
+        }
+
         const result = await watchlistCollection.insertOne(newWatchlist);
         res.send(result);
-    })
+    });
+
 
     app.get('/watchlist', async (req, res) => {
         const email = req.query.email;
