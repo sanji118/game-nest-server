@@ -1,8 +1,8 @@
-import express, { json } from 'express';
+const express = require('express');
 
-import cors from 'cors';
+const cors = require('cors')
 require('dotenv').config();
-import { MongoClient, ServerApiVersion, ObjectId } from 'mongodb';
+const { MongoClient, ServerApiVersion, ObjectId } =require('mongodb');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -11,10 +11,10 @@ const port = process.env.PORT || 5000;
 
 //middleware
 app.use(cors());
-app.use(json());
+app.use(express.json());
 
 
-import reviews from './reviews.json';
+const reviews = require('./reviews.json');
 
 app.get('/', (req, res)=>{
     res.send('GameNest server is running !');
@@ -112,10 +112,11 @@ async function run() {
         res.send(result);
     })
 
-    app.get('/api/watchlist', async(req, res)=>{
-        const allItems = await watchlistCollection.find().toArray();
-        res.send(allItems);
-    })
+    app.get('/api/watchlist', async (req, res) => {
+        const email = req.query.email;
+        const result = await watchlistCollection.find({ userEmail: email }).toArray();
+        res.send(result);
+    });
 
     app.get('/api/watchlist/:id', async (req, res) => {
         const id = req.params.id;
